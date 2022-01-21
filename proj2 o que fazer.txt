@@ -9,11 +9,11 @@ Primeira hora de cada dia válida para o primeiro evento do dia (inclusiva);
 Hora de término das atividades para cada dia (exclusiva);
 ####
 4- Calendario (Ok)
-5-Exibir o roteiro em formato de lista.
-6-Exibir o roteiro como um calendário mensal na tela. Implemente dias da semana. 
+5-Exibir o roteiro em formato de lista. 
+6-Exibir o roteiro como um calendário mensal na tela. Implemente dias da semana. (Requisito 2)
 Considere o mês como Fevereiro de 2022: Início na terça-feira. Total de 28 dias. 
 Não há seleção de mês ou ano.
-7-Mostrar o calendário de Fevereiro de 2022 sem eventos na tela. (Ok?)
+7-Mostrar o calendário de Fevereiro de 2022 sem eventos na tela. (Ok?) (Requisito 2)
 
 ###Não precisa implementar entrada de eventos pelo console! Os dados devem ser incluídos via arquivo PL.###
 8-Verificar entrada de datas inválidas de acordo com suas regras de limites de hora, dia e mês.
