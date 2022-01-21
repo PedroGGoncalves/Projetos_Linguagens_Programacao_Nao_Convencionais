@@ -13,16 +13,23 @@ Hora de término das atividades para cada dia (exclusiva);
 6-Exibir o roteiro como um calendário mensal na tela. Implemente dias da semana. 
 Considere o mês como Fevereiro de 2022: Início na terça-feira. Total de 28 dias. 
 Não há seleção de mês ou ano.
-7-Mostrar o calendário de Fevereiro de 2022 sem eventos na tela.
-8-Implemente o requisito 2 para escrever em arquivo;
-9-Implemente o requisito 3 para escrever em arquivo.
+7-Mostrar o calendário de Fevereiro de 2022 sem eventos na tela. (Ok?)
+
 ###Não precisa implementar entrada de eventos pelo console! Os dados devem ser incluídos via arquivo PL.###
-10-Verificar entrada de datas inválidas de acordo com suas regras de limites de hora, dia e mês.
+8-Verificar entrada de datas inválidas de acordo com suas regras de limites de hora, dia e mês.
 Obrigatório: Não implemente outros meses! Apenas suporte Fevereiro de 2022 como único mês.
 Obrigatório: Não implemente minutos e segundos! Hora é o menor elemento de tempo.
-11-Escreva documentação (como comentário) para todas as regras.
-12-Escreva um manual de formatação do arquivo Prolog para incluir os eventos.
+9-Escreva documentação (como comentário) para todas as regras.
+10-Escreva um manual de formatação do arquivo Prolog para incluir os eventos.
 Para entregar: 3 artefatos: 1) código fonte em Prolog; 2) arquivo de inserção de eventos de exemplo em Prolog.
 3) manual de como escrever um arquivo de inserção de eventos e como usar as regras de mostrar eventos e 
 de calendário.
 Entregue apenas uma cópia por grupo. Coloque nomes de todos os participantes em todos os artefatos.
+
+
+Requisitos opcionais*:
+11-Implemente o requisito 2 para escrever em arquivo;
+12-Implemente o requisito 3 para escrever em arquivo.
+13-Faça uma nova versão do organizador que seja capaz de reordenar os eventos para que o roteiro ocupe menos dias; Dica: não é obrigatório provar que a função é otimizada.
+14-Implemente adição de eventos pelo console;
+15-Implemente remoção de eventos pelo console.
