@@ -1,3 +1,4 @@
+%Calendario
 calendario(1,fevereiro,2022,terça).
 calendario(2,fevereiro,2022,quarta).
 calendario(3,fevereiro,2022,quinta).
@@ -26,3 +27,5 @@ calendario(25,fevereiro,2022,sexta).
 calendario(26,fevereiro,2022,sábado).
 calendario(27,fevereiro,2022,domingo).
 calendario(28,fevereiro,2022,segunda).
+%Requisito 2 para arquivo
+tell('requisito2.txt'), listing(calendario), told.
