@@ -1,6 +1,6 @@
-1- Roteiro (roteiro com vários eventos e suas datas)
-2- Evento (para inserir na agenda, sem data, apenas duração) e Agenda
-3- Data (com hora e dia. sem minutos, sem segundos.)
+1- Roteiro (roteiro com vários eventos e suas datas) ** Bastelli
+2- Evento (para inserir na agenda, sem data, apenas duração) e Agenda ** Mondini
+3- Data (com hora e dia. sem minutos, sem segundos.) ** Gustavo
 ####
 O operador informa parâmetros:
 Primeiro dia do roteiro para alocar eventos (inclusivo);
@@ -9,18 +9,18 @@ Primeira hora de cada dia válida para o primeiro evento do dia (inclusiva);
 Hora de término das atividades para cada dia (exclusiva);
 ####
 4- Calendario (Ok)
-5-Exibir o roteiro em formato de lista. 
-6-Exibir o roteiro como um calendário mensal na tela. Implemente dias da semana. (Requisito 2)
+5-Exibir o roteiro em formato de lista. ** Bastelli
+6-Exibir o roteiro como um calendário mensal na tela. Implemente dias da semana. (Requisito 2) ** Vinicius
 Considere o mês como Fevereiro de 2022: Início na terça-feira. Total de 28 dias. 
 Não há seleção de mês ou ano.
-7-Mostrar o calendário de Fevereiro de 2022 sem eventos na tela. (Ok?) (Requisito 3)
+7-Mostrar o calendário de Fevereiro de 2022 sem eventos na tela. (Ok?) (Requisito 3) 
 
 ###Não precisa implementar entrada de eventos pelo console! Os dados devem ser incluídos via arquivo PL.###
-8-Verificar entrada de datas inválidas de acordo com suas regras de limites de hora, dia e mês.
+8-Verificar entrada de datas inválidas de acordo com suas regras de limites de hora, dia e mês. ** Pedro
 Obrigatório: Não implemente outros meses! Apenas suporte Fevereiro de 2022 como único mês.
 Obrigatório: Não implemente minutos e segundos! Hora é o menor elemento de tempo.
-9-Escreva documentação (como comentário) para todas as regras.
-10-Escreva um manual de formatação do arquivo Prolog para incluir os eventos.
+9-Escreva documentação (como comentário) para todas as regras. ** Vinicius
+10-Escreva um manual de formatação do arquivo Prolog para incluir os eventos. ** Mondini
 Para entregar: 3 artefatos: 1) código fonte em Prolog; 2) arquivo de inserção de eventos de exemplo em Prolog.
 3) manual de como escrever um arquivo de inserção de eventos e como usar as regras de mostrar eventos e 
 de calendário.
@@ -28,8 +28,8 @@ Entregue apenas uma cópia por grupo. Coloque nomes de todos os participantes em
 
 
 Requisitos opcionais*:
-11-Implemente o requisito 2 para escrever em arquivo;
-12-Implemente o requisito 3 para escrever em arquivo.
-13-Faça uma nova versão do organizador que seja capaz de reordenar os eventos para que o roteiro ocupe menos dias; Dica: não é obrigatório provar que a função é otimizada.
-14-Implemente adição de eventos pelo console;
-15-Implemente remoção de eventos pelo console.
+11-Implemente o requisito 2 para escrever em arquivo; ** Vinicius
+12-Implemente o requisito 3 para escrever em arquivo. ** Pedro
+13-Faça uma nova versão do organizador que seja capaz de reordenar os eventos para que o roteiro ocupe menos dias; Dica: não é obrigatório provar que a função é otimizada. ** Gustavo
+14-Implemente adição de eventos pelo console; ** Bastelli
+15-Implemente remoção de eventos pelo console. ** Mondini
