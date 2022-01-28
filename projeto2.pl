@@ -1,31 +1,24 @@
 %Calendario
-calendario(1,fevereiro,2022,terça).
-calendario(2,fevereiro,2022,quarta).
-calendario(3,fevereiro,2022,quinta).
-calendario(4,fevereiro,2022,sexta).
-calendario(5,fevereiro,2022,sábado).
-calendario(6,fevereiro,2022,domingo).
-calendario(7,fevereiro,2022,segunda).
-calendario(8,fevereiro,2022,terça).
-calendario(9,fevereiro,2022,quarta).
-calendario(10,fevereiro,2022,quinta).
-calendario(11,fevereiro,2022,sexta).
-calendario(12,fevereiro,2022,sábado).
-calendario(13,fevereiro,2022,domingo).
-calendario(14,fevereiro,2022,segunda).
-calendario(15,fevereiro,2022,terça).
-calendario(16,fevereiro,2022,quarta).
-calendario(17,fevereiro,2022,quinta).
-calendario(18,fevereiro,2022,sexta).
-calendario(19,fevereiro,2022,sábado).
-calendario(20,fevereiro,2022,domingo).
-calendario(21,fevereiro,2022,segunda).
-calendario(22,fevereiro,2022,terça).
-calendario(23,fevereiro,2022,quarta).
-calendario(24,fevereiro,2022,quinta).
-calendario(25,fevereiro,2022,sexta).
-calendario(26,fevereiro,2022,sábado).
-calendario(27,fevereiro,2022,domingo).
-calendario(28,fevereiro,2022,segunda).
+diaSemana(1,terça).
+diaSemana(2,quarta).
+diaSemana(3,quinta).
+diaSemana(4,sexta).
+diaSemana(5,sabado).
+diaSemana(6,domingo).
+diaSemana(7,segunda).
+diaSemana(N,Nome):-
+    Nmenos is N - 7,
+    diaSemana(Nmenos, Nome)
+    .
+dia(N):-
+    (   
+    N=<28,
+    diaSemana(N,Nome),
+    format('Dia:~d ~a ~n',[N,Nome]),
+    Proximo is N+1,
+    dia(Proximo)
+           );
+    true.
+calendario:- dia(1).
 %Requisito 2 para arquivo
 tell('requisito2.txt'), listing(calendario), told.
