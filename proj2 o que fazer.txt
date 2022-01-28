@@ -13,7 +13,7 @@ Hora de término das atividades para cada dia (exclusiva);
 6-Exibir o roteiro como um calendário mensal na tela. Implemente dias da semana. (Requisito 2) ** Vinicius
 Considere o mês como Fevereiro de 2022: Início na terça-feira. Total de 28 dias. 
 Não há seleção de mês ou ano.
-7-Mostrar o calendário de Fevereiro de 2022 sem eventos na tela. (Ok?) (Requisito 3) 
+7-Mostrar o calendário de Fevereiro de 2022 sem eventos na tela. (Ok?)  
 
 ###Não precisa implementar entrada de eventos pelo console! Os dados devem ser incluídos via arquivo PL.###
 8-Verificar entrada de datas inválidas de acordo com suas regras de limites de hora, dia e mês. ** Pedro
