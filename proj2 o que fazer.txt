@@ -1,5 +1,5 @@
 1- Roteiro (roteiro com vários eventos e suas datas) ** Bastelli
-2- Evento (para inserir na agenda, sem data, apenas duração) e Agenda ** Mondini
+2- Evento (para inserir no roteiro, sem data, apenas duração) ** Mondini
 3- Data (com hora e dia. sem minutos, sem segundos.) ** Gustavo
 ####
 O operador informa parâmetros:
