@@ -13,7 +13,7 @@ Hora de término das atividades para cada dia (exclusiva);
 6-Exibir o roteiro como um calendário mensal na tela. Implemente dias da semana. (Requisito 2) ** Vinicius
 Considere o mês como Fevereiro de 2022: Início na terça-feira. Total de 28 dias. 
 Não há seleção de mês ou ano.
-7-Mostrar o calendário de Fevereiro de 2022 sem eventos na tela. (Ok?)  
+7-Mostrar o calendário de Fevereiro de 2022 sem eventos na tela. (Requisito 3) (Ok)  
 
 ###Não precisa implementar entrada de eventos pelo console! Os dados devem ser incluídos via arquivo PL.###
 8-Verificar entrada de datas inválidas de acordo com suas regras de limites de hora, dia e mês. ** Pedro
@@ -29,7 +29,7 @@ Entregue apenas uma cópia por grupo. Coloque nomes de todos os participantes em
 
 Requisitos opcionais*:
 11-Implemente o requisito 2 para escrever em arquivo; ** Vinicius
-12-Implemente o requisito 3 para escrever em arquivo. ** Pedro
+12-Implemente o requisito 3 para escrever em arquivo. ** Pedro (Ok?)
 13-Faça uma nova versão do organizador que seja capaz de reordenar os eventos para que o roteiro ocupe menos dias; Dica: não é obrigatório provar que a função é otimizada. ** Gustavo
 14-Implemente adição de eventos pelo console; ** Bastelli
 15-Implemente remoção de eventos pelo console. ** Mondini
