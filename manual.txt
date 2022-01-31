@@ -1,3 +1,8 @@
+%Grupo 2
+%Gustavo Rosseto Leticio, Lucas Spagnol, Lucas Mondini, Pedro Gonçalves, Vinícius Brunheroto
+%Apagar o q cada um ia fazer aki
+
+
 %Abrir arquivos  - Feito
 consult("projeto2.pl").
 
