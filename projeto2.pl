@@ -6,6 +6,11 @@ evento(Nome, Duracao):- Nome == Nome, Duracao>0, Duracao<29.
 data(Dia,Hora):- Dia>0, Dia<29, Hora>0, Hora <25.
 roteiro(Nome,Duracao,Dia,Hora):-evento(Nome,Duracao),data(Dia,Hora).
 
+imprimeLista(Rorario,dia):-
+    Roteiro=roteiro(evento(Nome,Duracao),data(DiaEvento,Hora)),
+    dia=:=DiaEvento,
+    format('~a~d~d~d~n', [Nome,Duracao,DiaEvento,Hora]).
+
 %Calendario
 diaSemana(1,terça).
 diaSemana(2,quarta).
