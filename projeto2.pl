@@ -1,14 +1,17 @@
 %Grupo 2
 %Gustavo Rosseto Leticio, Lucas Spagnol, Lucas Mondini, Pedro Gonçalves, Vinícius Brunheroto
 
-%Data e verificação
+%Evento
 :-dynamic evento/2.
 evento(Nome, Duracao):- 
     Nome == Nome, 
     Duracao>0, 
     Duracao<29.
-
+    
+%Data e verificação
 data(Dia,Hora):- Dia>0, Dia<29, Hora>0, Hora <25.
+
+%Roteiro
 roteiro(Nome,Duracao,Dia,Hora):-evento(Nome,Duracao),data(Dia,Hora).
 
 imprimeLista(Roteiro,Dia):-
