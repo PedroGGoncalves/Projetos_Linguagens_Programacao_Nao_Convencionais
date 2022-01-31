@@ -6,9 +6,9 @@ evento(Nome, Duracao):- Nome == Nome, Duracao>0, Duracao<29.
 data(Dia,Hora):- Dia>0, Dia<29, Hora>0, Hora <25.
 roteiro(Nome,Duracao,Dia,Hora):-evento(Nome,Duracao),data(Dia,Hora).
 
-imprimeLista(Roteiro,dia):-
+imprimeLista(Roteiro,Dia):-
     Roteiro=roteiro(evento(Nome,Duracao),data(DiaEvento,Hora)),
-    dia=:=DiaEvento,
+    Dia=:=DiaEvento,
     format('~a~d~d~d~n', [Nome,Duracao,DiaEvento,Hora]).
 
 %Calendario
@@ -34,4 +34,4 @@ dia(N):-
     true.
 calendario:- dia(1).
 %Requisito 2 para arquivo
-tell('requisito2.txt'), listing(calendario), told.
+%tell('requisito2.txt'), listing(calendario), told.
