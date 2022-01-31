@@ -1,20 +1,19 @@
-#### ** Gustavo
+8- #### ** Gustavo
 O operador informa parâmetros:
 Primeiro dia do roteiro para alocar eventos (inclusivo);
 Último dia do roteiro para alocar eventos (inclusivo);
 Primeira hora de cada dia válida para o primeiro evento do dia (inclusiva);
 Hora de término das atividades para cada dia (exclusiva);
 ####
-13-Faça uma nova versão do organizador que seja capaz de reordenar os eventos para que o roteiro ocupe menos dias; Dica: não é obrigatório provar que a função é otimizada. ** Gustavo
+9-Faça uma nova versão do organizador que seja capaz de reordenar os eventos para que o roteiro ocupe menos dias; Dica: não é obrigatório provar que a função é otimizada. ** Gustavo
 
-5-Exibir o roteiro em formato de lista. ** Bastelli
+10-Exibir o roteiro em formato de lista. ** Bastelli
 
+11-Exibir o roteiro como um calendário mensal na tela. Implemente dias da semana. (Requisito 2) ** Vinicius
+12-Escreva documentação (como comentário) para todas as regras. ** Vinicius
+13-Implemente o requisito 2 para escrever em arquivo; ** Vinicius
 
-6-Exibir o roteiro como um calendário mensal na tela. Implemente dias da semana. (Requisito 2) ** Vinicius
-9-Escreva documentação (como comentário) para todas as regras. ** Vinicius
-11-Implemente o requisito 2 para escrever em arquivo; ** Vinicius
-
-15-Implemente remoção de eventos pelo console. ** Mondini
+14-Implemente remoção de eventos pelo console. ** Mondini
 
 Para entregar: 3 artefatos: 
 1) código fonte em Prolog; **Todos
@@ -31,8 +30,8 @@ Entregue apenas uma cópia por grupo. Coloque nomes de todos os participantes em
 2- Evento (para inserir no roteiro, sem data, apenas duração) ** (Ok)
 3- Data (com hora e dia. sem minutos, sem segundos.) **(Ok)
 4- Calendario (Ok)
-7-Mostrar o calendário de Fevereiro de 2022 sem eventos na tela. (Requisito 3) ** (Ok)  
-8-Verificar entrada de datas inválidas de acordo com suas regras de limites de hora, dia e mês. ** (Ok)
-14-Implemente adição de eventos pelo console; ** (Ok)
+5-Mostrar o calendário de Fevereiro de 2022 sem eventos na tela. (Requisito 3) ** (Ok)  
+6-Verificar entrada de datas inválidas de acordo com suas regras de limites de hora, dia e mês. ** (Ok)
+7-Implemente adição de eventos pelo console; ** (Ok)
 
 
