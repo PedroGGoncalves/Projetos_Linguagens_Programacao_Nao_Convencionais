@@ -5,31 +5,28 @@ Primeiro dia do roteiro para alocar eventos (inclusivo);
 Primeira hora de cada dia válida para o primeiro evento do dia (inclusiva);
 Hora de término das atividades para cada dia (exclusiva);
 ####
+13-Faça uma nova versão do organizador que seja capaz de reordenar os eventos para que o roteiro ocupe menos dias; Dica: não é obrigatório provar que a função é otimizada. ** Gustavo
 
 5-Exibir o roteiro em formato de lista. ** Bastelli
+14-Implemente adição de eventos pelo console; ** Bastelli
+
 6-Exibir o roteiro como um calendário mensal na tela. Implemente dias da semana. (Requisito 2) ** Vinicius
-Considere o mês como Fevereiro de 2022: Início na terça-feira. Total de 28 dias. 
-Não há seleção de mês ou ano.
-
-
-###Não precisa implementar entrada de eventos pelo console! Os dados devem ser incluídos via arquivo PL.###
-
-Obrigatório: Não implemente outros meses! Apenas suporte Fevereiro de 2022 como único mês.
-Obrigatório: Não implemente minutos e segundos! Hora é o menor elemento de tempo.
 9-Escreva documentação (como comentário) para todas as regras. ** Vinicius
+11-Implemente o requisito 2 para escrever em arquivo; ** Vinicius
+
 10-Escreva um manual de formatação do arquivo Prolog para incluir os eventos. ** Mondini
-Para entregar: 3 artefatos: 1) código fonte em Prolog; 2) arquivo de inserção de eventos de exemplo em Prolog.
+15-Implemente remoção de eventos pelo console. ** Mondini
+
+Para entregar: 3 artefatos: 
+1) código fonte em Prolog; 
+2) arquivo de inserção de eventos de exemplo em Prolog.
 3) manual de como escrever um arquivo de inserção de eventos e como usar as regras de mostrar eventos e 
 de calendário.
 Entregue apenas uma cópia por grupo. Coloque nomes de todos os participantes em todos os artefatos.
 
 
-Requisitos opcionais*:
-11-Implemente o requisito 2 para escrever em arquivo; ** Vinicius
 12-Implemente o requisito 3 para escrever em arquivo. ** (Ok?)
-13-Faça uma nova versão do organizador que seja capaz de reordenar os eventos para que o roteiro ocupe menos dias; Dica: não é obrigatório provar que a função é otimizada. ** Gustavo
-14-Implemente adição de eventos pelo console; ** Bastelli
-15-Implemente remoção de eventos pelo console. ** Mondini
+
 /////////
 1- Roteiro (roteiro com vários eventos e suas datas) ** (Ok)
 2- Evento (para inserir no roteiro, sem data, apenas duração) ** (Ok)
