@@ -1,13 +1,20 @@
 %Grupo 2
 %Gustavo Rosseto Leticio, Lucas Spagnol, Lucas Mondini, Pedro Gonçalves, Vinícius Brunheroto
-
+:- dynamic lista/1.
+lista([]).
 %Evento
-:-dynamic evento/2.
 evento(Nome, Duracao):- 
     Nome == Nome, 
     Duracao>0, 
     Duracao<29.
-    
+
+%Adiciona evento na lista
+adiciona(Evento) :-
+    lista(L),
+    append(L, Evento, NovoL),
+    retract(lista(L)),
+    asserta(lista(NovoL)).
+
 %Data e verificação
 data(Dia,Hora):- Dia>0, Dia<29, Hora>0, Hora <25.
 

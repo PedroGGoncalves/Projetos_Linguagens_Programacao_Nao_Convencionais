@@ -6,7 +6,8 @@
 %Abrir arquivos  - Feito
 consult("projeto2.pl").
 
-%Inserção de eventos - Bastelli
+%Inserção de eventos - Feito
+adiciona([evento(NomeDoEvento)]). %NomeDoEvento deve ser uma string, evento deve estar entre colchetes 
 
 %Mostrar eventos - Mondini
 
