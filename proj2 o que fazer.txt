@@ -15,7 +15,7 @@ Hora de término das atividades para cada dia (exclusiva);
 11-Implemente o requisito 2 para escrever em arquivo; ** Vinicius
 
 10-Escreva um manual de formatação do arquivo Prolog para incluir os eventos. ** Mondini
-15-Implemente remoção de eventos pelo console. ** Mondini
+15-Implemente remoção de eventos pelo console. ** Bastelli, Mondini, Vinicius
 
 Para entregar: 3 artefatos: 
 1) código fonte em Prolog; 
