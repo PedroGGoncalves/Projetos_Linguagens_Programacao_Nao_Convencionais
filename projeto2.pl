@@ -1,3 +1,6 @@
+%Data e verificação
+data(Dia,Hora):- Dia>0, Dia<29, Hora>0, Hora <25.
+
 %Calendario
 diaSemana(1,terça).
 diaSemana(2,quarta).
