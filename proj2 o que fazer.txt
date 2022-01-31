@@ -14,14 +14,13 @@ Hora de término das atividades para cada dia (exclusiva);
 9-Escreva documentação (como comentário) para todas as regras. ** Vinicius
 11-Implemente o requisito 2 para escrever em arquivo; ** Vinicius
 
-10-Escreva um manual de formatação do arquivo Prolog para incluir os eventos. ** Mondini
-15-Implemente remoção de eventos pelo console. ** Bastelli, Mondini, Vinicius
+15-Implemente remoção de eventos pelo console. ** Mondini
 
 Para entregar: 3 artefatos: 
-1) código fonte em Prolog; 
-2) arquivo de inserção de eventos de exemplo em Prolog.
+1) código fonte em Prolog; **Todos
+2) arquivo de inserção de eventos de exemplo em Prolog. ** Bastelli
 3) manual de como escrever um arquivo de inserção de eventos e como usar as regras de mostrar eventos e 
-de calendário.
+de calendário.** Bastelli (arquivo de inserção de eventos e como usar as regras), Mondini (como mostrar eventos), Vinicius (como mostrar eventos e de calendário.)
 Entregue apenas uma cópia por grupo. Coloque nomes de todos os participantes em todos os artefatos.
 
 
