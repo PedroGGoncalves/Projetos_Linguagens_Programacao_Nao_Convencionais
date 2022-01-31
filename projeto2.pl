@@ -46,7 +46,7 @@ dia(N):-
 
 ImprimeData(Horario,Dia) :-
     Horario = horario(evento(Nome,Duração), data (DiaEvento, Hora)),
-    Dia =:= DiaEvento,
+    Dia =:= DiaEvento,  %se isso for verdade, printa
     format("~a ~d ~d ~d~n",[Nome,Duração,DiaEvento,Hora]).
 
 %caso base
@@ -57,9 +57,9 @@ imprimeEventos(N, Roteiro) :-
    Roteiro = [Cabeça|Cauda], % divide numa lista com cabeça e cauda
    {
     ImprimeData(Cabeça, N) % subrotina
-    ImprimeEventos (Cabeça,N)  %subrotina 
+    ImprimeEventos (N,Cabeça)  %recursão, chama ele mesmo passando a cabeça
    } ;
-   imprimeEventos (N, Cauda).
+   imprimeEventos (N, Cauda). % recursão, chama ele mesmo passando a cauda
 
 %-------------------------------------------------------------------------%
     
