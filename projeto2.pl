@@ -2,7 +2,7 @@
 Evento(Nome,Duracao):- Duracao>0, Duracao<29.
 data(Dia,Hora):- Dia>0, Dia<29, Hora>0, Hora <25.
 Evento (Nome, Duracao). 
-Roteiro(Evento,data).
+Roteiro(evento,data).
 
 %Calendario
 diaSemana(1,terça).
