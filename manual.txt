@@ -1,0 +1,11 @@
+%Abrir arquivos  - Feito
+consult("projeto2.pl").
+
+%Inserção de eventos - Bastelli
+
+%Mostrar eventos - Mondini
+
+%Mostrar calendário - Feito
+calendario.
+
+%Mostrar eventos e calendário console - Vinícius
