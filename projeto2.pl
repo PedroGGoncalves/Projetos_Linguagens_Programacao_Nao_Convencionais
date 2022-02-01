@@ -45,28 +45,28 @@ dia(N):-
     format('Dia:~d ~a ~n',[N,Nome]),
     Proximo is N+1,
     dia(Proximo),
-    ImprimeEventos(N,Roteiro)
+    imprimeEventos(N,Roteiro)
            );
     true.
     
 %---------------------PRECISA TESTAR--------------------------------------%
 
-ImprimeData(Horario,Dia) :-
+imprimeData(Horario,Dia) :-
     Horario = horario(evento(Nome,Duração), data (DiaEvento, Hora)),
     Dia =:= DiaEvento,  %se isso for verdade, printa
     format("~a ~d ~d ~d~n",[Nome,Duração,DiaEvento,Hora]).
 
 %caso base
-ImprimeEventos(_,[])
+imprimeEventos(_,[])
 
 %Recursão ( passa o dia que deve imprimir e o roteiro)
-ImprimeEventos(N, Roteiro) :-
+imprimeEventos(N, Roteiro) :-
    Roteiro = [Cabeça|Cauda], % divide numa lista com cabeça e cauda
    {
-    ImprimeData(Cabeça, N) % subrotina
-    ImprimeEventos (N,Cabeça)  %recursão, chama ele mesmo passando a cabeça
+    imprimeData(Cabeça, N) % subrotina
+    imprimeEventos (N,Cabeça)  %recursão, chama ele mesmo passando a cabeça
    } ;
-   ImprimeEventos (N, Cauda). % recursão, chama ele mesmo passando a cauda
+   imprimeEventos (N, Cauda). % recursão, chama ele mesmo passando a cauda
 
 %-------------------------------------------------------------------------%
     
