@@ -62,10 +62,10 @@ imprimeEventos(_,[]).
 %Recursão ( passa o dia que deve imprimir e o roteiro)
 imprimeEventos(N, Roteiro) :-
    Roteiro = [Cabeça|Cauda], % divide numa lista com cabeça e cauda
-   {
+   (
     imprimeData(Cabeça, N) % subrotina
     imprimeEventos (N,Cabeça)  %recursão, chama ele mesmo passando a cabeça
-   } ;
+   ) ;
    imprimeEventos (N, Cauda). % recursão, chama ele mesmo passando a cauda
 
 %-------------------------------------------------------------------------%
