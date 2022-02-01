@@ -57,7 +57,7 @@ imprimeData(Horario,Dia) :-
     format("~a ~d ~d ~d~n",[Nome,Duração,DiaEvento,Hora]).
 
 %caso base
-imprimeEventos(_,[])
+imprimeEventos(_,[]).
 
 %Recursão ( passa o dia que deve imprimir e o roteiro)
 imprimeEventos(N, Roteiro) :-
