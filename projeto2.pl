@@ -75,4 +75,4 @@ imprimeEventos(N, Roteiro) :-
     
 calendario:- dia(1).
 %Requisito 2 para arquivo
-%tell('requisito2.txt'), listing(calendario), told.
+%calendarioNoArquivo:-tell('requisito2.txt'), listing(dias(1),true), told.
