@@ -7,13 +7,11 @@ Hora de término das atividades para cada dia (exclusiva);
 ####
 10-Reordenar os eventos para que o roteiro ocupe menos dias; Dica: não é obrigatório provar que a função é otimizada. ** Gustavo
 
-11-Exibir o roteiro em formato de lista. ** Bastelli
 
 12-Exibir o roteiro como um calendário mensal na tela. Implemente dias da semana. (Requisito 2) ** Vinicius
 13-Escreva documentação (como comentário) para todas as regras. ** Vinicius
 14-Implemente o requisito 2 para escrever em arquivo; ** Vinicius
 
-15-Implemente remoção de eventos pelo console. ** Mondini
 
 Para entregar: 3 artefatos: 
 1) código fonte em Prolog; **Todos
@@ -29,4 +27,5 @@ Para entregar: 3 artefatos:
 6-Verificar entrada de datas inválidas de acordo com suas regras de limites de hora, dia e mês. ** (Ok)
 7-Implemente adição de eventos pelo console; ** (Ok)
 8-Implemente o requisito 3 para escrever em arquivo. ** (Ok?)
-
+11-Exibir o roteiro em formato de lista. ** (Ok)
+15-Implemente remoção de eventos pelo console. ** (Ok)

@@ -6,10 +6,14 @@
 %Abrir arquivos  - Feito
 consult("projeto2.pl").
 
-%Inserção de eventos - Feito
-adiciona([evento(NomeDoEvento)]). %NomeDoEvento deve ser uma string, evento deve estar entre colchetes 
+%Inserção de eventos pelo console- Feito
+?- adiciona(Nome, Duracao). % Nome: nome do evento, Duracao: duração do evento em horas
 
-%Mostrar eventos - Mondini
+%Remoção de eventos pelo console - Feito
+?- remove(Nome). % Nome: nome do evento a ser removido
+
+%Exibir o roteiro em formato de lista - Feito
+?- lista(L).
 
 %Mostrar calendário - Feito
 calendario.

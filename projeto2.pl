@@ -7,7 +7,7 @@ lista([]).
 %Adiciona evento no banco
 adiciona(Nome, Duracao) :-
     Duracao > 0, 
-    Duracao < 29,
+    Duracao < 672, % 28 dias em horas (passível de alteração)
     assertz(evento(Nome, Duracao)),
 	retract(lista(_)),
     findall(evento(X,Y), evento(X, Y), L),
