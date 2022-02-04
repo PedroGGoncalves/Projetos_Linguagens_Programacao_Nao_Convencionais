@@ -16,7 +16,7 @@ Hora de término das atividades para cada dia (exclusiva);
 Para entregar: 3 artefatos: 
 1) código fonte em Prolog; **Todos
 2) arquivo de inserção de eventos de exemplo em Prolog. ** Bastelli
-3) manual de como escrever ** Bastelli (arquivo de inserção de eventos e como usar as regras), Mondini (como mostrar eventos), Vinicius (como mostrar eventos e calendário.)
+3) manual de como escrever ** Bastelli (arquivo de inserção de eventos), Mondini (como mostrar eventos) - OK, Vinicius (como mostrar eventos e calendário.)
 
 /////////
 1- Roteiro (roteiro com vários eventos e suas datas) ** (Ok)
