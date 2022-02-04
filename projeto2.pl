@@ -43,17 +43,20 @@ diaSemana(N,Nome):-
     Nmenos is N - 7,
     diaSemana(Nmenos, Nome)
     .
-dia(N,Roteiro):-   
+dia(N,Roteiro):-
+   (
     N=<28,
     diaSemana(N,Nome),
     format('Dia:~d ~a ~n',[N,Nome]),
     imprimeEventos(N,Roteiro),
-    Proximo is N+1
-    dia(Proximo,Roteiro).
-  
+    Proximo is N+1,
+    dia(Proximo,Roteiro)
+    )
+    ;
+    true
     
 %---------------------PRECISA TESTAR--------------------------------------%
-
+%requisito2
 imprimeData(Horario,Dia) :-
     Horario = horario(evento(Nome,Duração), data (DiaEvento, Hora)),
     Dia =:= DiaEvento,  %se isso for verdade, printa
@@ -73,6 +76,6 @@ imprimeEventos(N, Roteiro) :-
 %-------------------------------------------------------------------------%
     
     
-calendario:- dia(1).
+calendario:- dia(1,Roteiro).
 %Requisito 2 para arquivo
-%calendarioNoArquivo:-tell('requisito2.txt'), listing(dias(1),true), told.
+calendarioNoArquivo:-tell('requisito2.txt'), calendario, told.
