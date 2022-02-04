@@ -41,8 +41,7 @@ diaSemana(6,domingo).
 diaSemana(7,segunda).
 diaSemana(N,Nome):-
     Nmenos is N - 7,
-    diaSemana(Nmenos, Nome)
-    .
+    diaSemana(Nmenos, Nome).
 dia(N,Roteiro):-
    (
     N=<28,
@@ -53,7 +52,7 @@ dia(N,Roteiro):-
     dia(Proximo,Roteiro)
     )
     ;
-    true
+    true.
     
 %---------------------PRECISA TESTAR--------------------------------------%
 %requisito2
