@@ -3,7 +3,7 @@
 %Apagar o q cada um ia fazer aki
 
 
-%Abrir arquivos  - Feito
+%Abrir arquivo  - Feito
 consult("projeto2.pl").
 
 %Inserção de eventos pelo console- Feito
