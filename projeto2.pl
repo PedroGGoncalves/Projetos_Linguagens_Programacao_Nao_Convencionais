@@ -38,16 +38,14 @@ diaSemana(N,Nome):-
     Nmenos is N - 7,
     diaSemana(Nmenos, Nome)
     .
-dia(N):-
-    (   
+dia(N,Roteiro):-   
     N=<28,
     diaSemana(N,Nome),
     format('Dia:~d ~a ~n',[N,Nome]),
-    Proximo is N+1,
-    dia(Proximo),
-    imprimeEventos(N,Roteiro)
-           );
-    true.
+    imprimeEventos(N,Roteiro),
+    Proximo is N+1
+    dia(Proximo,Roteiro).
+  
     
 %---------------------PRECISA TESTAR--------------------------------------%
 
@@ -64,10 +62,9 @@ imprimeEventos(N, Roteiro) :-
    Roteiro = [Cabeça|Cauda], % divide numa lista com cabeça e cauda
    (
     imprimeData(Cabeça, N) % subrotina
-    imprimeEventos (N,Cabeça)  %recursão, chama ele mesmo passando a cabeça
-   ) ;
-   imprimeEventos (N, Cauda). % recursão, chama ele mesmo passando a cauda
-
+    ;
+    imprimeEventos (N, Cauda) % recursão, chama ele mesmo passando a cauda
+   ).
 %-------------------------------------------------------------------------%
     
     
