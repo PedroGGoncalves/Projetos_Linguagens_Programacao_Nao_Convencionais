@@ -64,17 +64,17 @@ imprimeData(Horario,Dia) :-
 %caso base
 imprimeEventos(_,[]).
 
-%Recursão ( passa o dia que deve imprimir e o roteiro)
+%Recursão( passa o dia que deve imprimir e o roteiro)
 imprimeEventos(N, Roteiro) :-
    Roteiro = [Cabeça|Cauda], % divide numa lista com cabeça e cauda
    (
     imprimeData(Cabeça, N) % subrotina
     ;
-    imprimeEventos (N, Cauda) % recursão, chama ele mesmo passando a cauda
+    imprimeEventos(N, Cauda) % recursão, chama ele mesmo passando a cauda
    ).
 %-------------------------------------------------------------------------%
     
     
-calendario:- dia(1,Roteiro).
+calendario:-dia(1,Roteiro).
 %Requisito 2 para arquivo
 calendarioNoArquivo:-tell('requisito2.txt'), calendario, told.
