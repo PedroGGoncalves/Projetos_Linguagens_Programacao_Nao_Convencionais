@@ -1,0 +1,100 @@
+%Grupo 2
+%Gustavo Rosseto Leticio, Lucas Spagnol, Lucas Mondini, Pedro Gonçalves, Vinícius Brunheroto
+:- dynamic evento/2.
+:- dynamic lista/1.
+:- dynamic dia_inicio/1.
+:- dynamic dia_fim/1.
+:- dynamic hora_inicio/1.
+:- dynamic hora_fim/1.
+
+lista([]).
+
+%Adiciona evento no banco
+adiciona(Nome, Duracao) :-
+    Duracao > 0, %se comeca dia 2 por exemplo, n seria 0, duração tem q ser maior q 24, ignorando o primeiro dia.
+    Duracao < 672, % 28 dias em horas (passível de alteração)
+    %n seria 672, seria 24hrs vezes a qtd de dias do roteiro.
+    % duraçao tem q ser menor q o ultimo dia do roteiro, n do mes inteiro
+    assertz(evento(Nome, Duracao)),
+	retract(lista(_)),
+    findall(evento(X,Y), evento(X, Y), L),
+    asserta(lista(L)).
+    %ta aidiconando independente, so verifica se ta dentro de feveriero e n se ta dentro do roteiro
+
+%Remove evento do banco
+remove(Nome) :-
+    retract(evento(Nome, _)),
+    retract(lista(_)),
+    findall(evento(X,Y), evento(X, Y), L),
+    asserta(lista(L)).
+
+%Data e verificação
+data(Dia,Hora):- Dia>0, Dia<29, Hora>0, Hora <25.
+% n adianta veriricar entre 0 e 29 e 0 e 25 pq pra inserir evento valido
+% tem q ta entre os limites do roteiro, primeiro dia e utimo e primeira hr e ultima hr
+% feveriero 1 ate 28, so q roteiro so vai dia 1 ate 15, n pode inserir dia 16 pq n ta dentro roteiro
+
+
+%Roteiro
+roteiro(Nome,Duracao,Dia,Hora):-evento(Nome,Duracao),data(Dia,Hora).
+
+roteiroInf :-
+    print("Digite primeiro dia:"),
+    nl,
+    read(Primeirodia),
+    asserta(dia_inicio(Primeirodia)),
+    print("Digite ultimo dia:"),
+    nl,
+    read(Ultimodia),
+    asserta(dia_fim(Ultimodia)),
+    print("Digite primeira hora de cada dia:"), 
+    nl,
+    read(Primeirahora),
+    asserta(hora_inicio(Primeirahora)),
+    print("Digite a ultima hora de cada dia: "),
+    nl,
+    read(Ultimahora),
+    asserta(hora_fim(Ultimahora)).
+
+teste :- 
+    hora_fim(X),
+    print(X).
+    
+    
+
+imprimeLista(Roteiro,Dia):-
+    Roteiro=roteiro(evento(Nome,Duracao),data(DiaEvento,Hora)),
+    Dia=:=DiaEvento,
+    format('~a~d~d~d~n', [Nome,Duracao,DiaEvento,Hora]).
+
+%Calendario
+diaSemana(1,terça).
+diaSemana(2,quarta).
+diaSemana(3,quinta).
+diaSemana(4,sexta).
+diaSemana(5,sabado).
+diaSemana(6,domingo).
+diaSemana(7,segunda).
+
+diaSemana(N,Nome):-
+    Nmenos is N - 7,
+    diaSemana(Nmenos, Nome).
+
+dia(N,Roteiro):-
+   (
+    N=<28,
+    diaSemana(N,Nome),
+    format('Dia:~d ~a ~n',[N,Nome]),
+    imprimeEventos(N,Roteiro),
+    Proximo is N+1,
+    dia(Proximo,Roteiro)
+    )
+    ;
+    true.
+    
+
+    
+    
+calendario:- dia(1,Roteiro).
+%Requisito 2 para arquivo
+calendarioNoArquivo:-tell('requisito2.txt'), calendario, told.
