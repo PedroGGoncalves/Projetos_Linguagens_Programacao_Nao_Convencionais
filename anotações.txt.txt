@@ -36,7 +36,9 @@ data(Dia,Hora):- Dia>0, Dia<29, Hora>0, Hora <25.
 
 
 %Roteiro
-roteiro(Nome,Duracao,Dia,Hora):-evento(Nome,Duracao),data(Dia,Hora).
+roteiro(Nome,Duracao,Dia,Hora):-evento(Nome,Duracao),data(Dia,Hora)
+%;true
+.
 
 roteiroInf :-
     print("Digite primeiro dia:"),
