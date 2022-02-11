@@ -2,7 +2,6 @@
 %Gustavo Rosseto Leticio, Lucas Spagnol, Lucas Mondini, Pedro Gonçalves, Vinícius Brunheroto
 %Apagar o q cada um ia fazer aki
 
-
 %Abrir arquivo  - Feito
 consult("projeto2.pl").
 
@@ -12,8 +11,11 @@ consult("projeto2.pl").
 %Remoção de eventos pelo console - Feito
 ?- remove(Nome). % Nome: nome do evento a ser removido
 
+%Organizar o roteiro (requer que tenha sido adicionados eventos antes)
+?- eventos(E), organiza(E, [], PrimeiroDia, ÚltimoDia, PrimeiraHora, ÚltimaHora).
+
 %Exibir o roteiro em formato de lista - Feito
-?- lista(L).
+?- roteiro(Roteiro).
 
 %Mostrar calendário - Feito
 calendario.
