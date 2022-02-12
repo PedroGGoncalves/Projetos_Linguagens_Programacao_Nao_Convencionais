@@ -124,7 +124,7 @@ organiza([EvHead | EvTail], Roteiro, PrimeiroDia, ÚltimoDia, PrimeiraHora, Últ
     append(Roteiro, [horario(EvHead, data(PrimeiroDia, PrimeiraHora))], NovoRoteiro),
     organizaRecursao(EvTail, NovoRoteiro, PrimeiroDia, ÚltimoDia, PrimeiraHora, ÚltimaHora, FimNovoEvento). 
 
-%%****EXIBIÇÃO DO ROTEIRO EM FORMATO DE LISTA E COMO CALENDÁRIO MENSAL NA TELA E NO ARQUIVO****
+%%****EXIBIÇÃO DO ROTEIRO EM FORMATO DE LISTA E COMO CALENDÁRIO MENSAL NA TELA E EM UM ARQUIVO****
 %Fatos e regras para associação dos dias da semana
 diaSemana(1, terça).
 diaSemana(2, quarta).
