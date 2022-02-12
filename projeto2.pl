@@ -1,7 +1,7 @@
 %Grupo 2
 %Gustavo Rosseto Leticio, Lucas Spagnol, Lucas Mondini, Pedro Gonçalves, Vinícius Brunheroto
 
-%%Setup do banco de dados dinâmico
+%%****SETUP DO BANCO DE DADOS DINÂMICO, INICIALIZAÇÕES E DECLARAÇÃO DE FATOS.****
 :-dynamic evento/2.
 :-dynamic listaEventos/1.
 :-dynamic roteiro/1.
@@ -17,14 +17,14 @@ dia_fim(28).
 hora_inicio(1).
 hora_fim(24).
 
-%%Especificação do if then else
+%%****ESPECIFICAÇÃO DO IF-THEN-ELSE****
 if(Condição, Then, _) :- Condição, !, Then.
 if(_,_,Else) :- Else.
 
-%%Verifica os limites válidos para dia e hora
+%%****VERIFICAÇÃO DOS LIMITES DIÁRIOS****
 data(Dia, Hora):- Dia > 0, Dia < 29, Hora > 0, Hora < 25.
 
-%%Gerenciamento de eventos
+%%****GERENCIAMENTO DE EVENTOS QUE SERÃO COLOCADOS NO ROTEIRO****
 %Adiciona eventos dinamicamente e reorganiza o roteiro
 adiciona(Nome, Duracao) :-
     assertz(evento(Nome, Duracao)),
@@ -45,7 +45,6 @@ carregaDoArquivo:-
     dia_inicio(PrimeiroDia), dia_fim(ÚltimoDia), hora_inicio(PrimeiraHora), hora_fim(ÚltimaHora),
     organiza(L, [], PrimeiroDia, ÚltimoDia, PrimeiraHora, ÚltimaHora). 
 
-
 %Remove o evento de nome Nome do banco de dados
 remove(Nome) :-
     retract(evento(Nome, _)),
@@ -56,7 +55,7 @@ remove(Nome) :-
     dia_inicio(PrimeiroDia), dia_fim(ÚltimoDia), hora_inicio(PrimeiraHora), hora_fim(ÚltimaHora),
     organiza(L, [], PrimeiroDia, ÚltimoDia, PrimeiraHora, ÚltimaHora). 
 
-%%Roteiro
+%%****ROTEIRO****
 roteiroInf :-
     print("Digite primeiro dia:"),
     nl,
@@ -85,7 +84,7 @@ roteiroInf :-
     listaEventos(L),
     organiza(L, [], Primeirodia, Ultimodia, Primeirahora, Ultimahora).
 
-%%Organizador
+%%****ORGANIZAÇÃO DO ROTEIRO****
 %Critério de parada (salva no banco de dados dinâmico)
 organizaRecursao([], Roteiro, _, _, _, _, _):- 
     retract(roteiro(_)),
@@ -125,7 +124,7 @@ organiza([EvHead | EvTail], Roteiro, PrimeiroDia, ÚltimoDia, PrimeiraHora, Últ
     append(Roteiro, [horario(EvHead, data(PrimeiroDia, PrimeiraHora))], NovoRoteiro),
     organizaRecursao(EvTail, NovoRoteiro, PrimeiroDia, ÚltimoDia, PrimeiraHora, ÚltimaHora, FimNovoEvento). 
 
-%%Calendario
+%%****EXIBIÇÃO DO ROTEIRO EM FORMATO DE LISTA E COMO CALENDÁRIO MENSAL NA TELA E NO ARQUIVO****
 %Fatos e regras para associação dos dias da semana
 diaSemana(1, terça).
 diaSemana(2, quarta).
@@ -149,7 +148,7 @@ dia(N, Roteiro):-
     );
     true.
     
-%Imprime informações do evento se estiver no dia certo
+%Imprime informações do evento na tela se estiver no dia certo correspondente ao dia do evento salvo no roteiro
 imprimeData(Horario, Dia) :-
     Horario = horario(evento(Nome, Duração), data(DiaEvento, Hora)),
     Dia =:= DiaEvento,  %se isso for verdade, printa
@@ -160,23 +159,24 @@ imprimelistaEventos(_,[]).
 
 %Recursão para procurar se há eventos para imprimir no dia N (passa o dia e o roteiro)
 imprimelistaEventos(N, [Cabeça|Cauda]) :-
-    imprimeData(Cabeça, N), fail; % subrotina (não sei pq mas ele só roda o que está dps do ; se der false)  
+    imprimeData(Cabeça, N), fail; % subrotina 
     imprimelistaEventos(N, Cauda). % recursão, chama ele mesmo passando a cauda
 
-%Requisito 1
+%Requisito 1: Exibir o roteiro em formato de lista
 imprimeLista:-
     roteiro(R),
     write(R).    
-%Requisito 2   
+    
+%Requisito 2: Exibir o roteiro como um calendário mensal na tela.   
 calendarioRoteiro:- 
     roteiro(R),
     dia(1, R), !.
 
-%Requisito 3
+%Requisito 3: Mostrar o calendário de Fevereiro de 2022 sem eventos na tela.
 calendarioSimples:-
     dia(1, []), !.
 
-%Requisito 2 para arquivo
+%Implementação do requisito 2 para escrever no arquivo
 calendarioRoteiroNoArquivo:- tell('requisito2.txt'), calendarioRoteiro, told.
-%Requisito 3 para arquivo
+%Implementação do requisito 3 para escrever no arquivo
 calendarioSimplesNoArquivo:- tell('requisito3.txt'), calendarioSimples, told.
