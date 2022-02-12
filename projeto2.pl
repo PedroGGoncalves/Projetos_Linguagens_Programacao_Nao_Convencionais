@@ -11,6 +11,11 @@
 :-dynamic hora_fim/1.
 listaEventos([]).
 roteiro([]).
+%Os dias e horas para inclusão inicialmente envolvem o mês inteiro. Deve ser definido com roteiroInf posteriormente.
+dia_inicio(1).
+dia_fim(28).
+hora_inicio(1).
+hora_fim(24).
 
 %%Especificação do if then else
 if(Condição, Then, _) :- Condição, !, Then.
@@ -26,16 +31,30 @@ adiciona(Nome, Duracao) :-
 	retract(listaEventos(_)),
     findall(evento(X,Y), evento(X, Y), L),
     asserta(listaEventos(L)),
-    %necessita chamar a função roteiroInf antes 
+    %Reorganiza o roteiro
     dia_inicio(PrimeiroDia), dia_fim(ÚltimoDia), hora_inicio(PrimeiraHora), hora_fim(ÚltimaHora),
     organiza(L, [], PrimeiroDia, ÚltimoDia, PrimeiraHora, ÚltimaHora). 
+
+%Carrega o banco de dados do "arquivo_insercao.pl" e organiza automaticamente o banco de dados dinâmico e o roteiro
+carregaDoArquivo:-
+    consult("arquivo_insercao.pl"),
+    retract(listaEventos(_)),
+    findall(evento(X,Y), evento(X, Y), L),
+    asserta(listaEventos(L)),
+    %Reorganiza o roteiro
+    dia_inicio(PrimeiroDia), dia_fim(ÚltimoDia), hora_inicio(PrimeiraHora), hora_fim(ÚltimaHora),
+    organiza(L, [], PrimeiroDia, ÚltimoDia, PrimeiraHora, ÚltimaHora). 
+
 
 %Remove o evento de nome Nome do banco de dados
 remove(Nome) :-
     retract(evento(Nome, _)),
     retract(listaEventos(_)),
     findall(evento(X,Y), evento(X, Y), L),
-    asserta(listaEventos(L)).
+    asserta(listaEventos(L)),
+    %Reorganiza o roteiro
+    dia_inicio(PrimeiroDia), dia_fim(ÚltimoDia), hora_inicio(PrimeiraHora), hora_fim(ÚltimaHora),
+    organiza(L, [], PrimeiroDia, ÚltimoDia, PrimeiraHora, ÚltimaHora). 
 
 %%Roteiro
 roteiroInf :-
@@ -53,10 +72,18 @@ roteiroInf :-
     read(Ultimahora),
     data(Primeirodia, Primeirahora),
     data(Ultimodia, Ultimahora),
+    %Atualização das variáveis globais
+    retract(dia_inicio(_)),
+    retract(dia_fim(_)),
+    retract(hora_inicio(_)),
+    retract(hora_fim(_)),
     asserta(dia_inicio(Primeirodia)),
     asserta(dia_fim(Ultimodia)),
     asserta(hora_inicio(Primeirahora)),
-    asserta(hora_fim(Ultimahora)).
+    asserta(hora_fim(Ultimahora)),
+    %Reorganiza o roteiro
+    listaEventos(L),
+    organiza(L, [], Primeirodia, Ultimodia, Primeirahora, Ultimahora).
 
 %%Organizador
 %Critério de parada (salva no banco de dados dinâmico)
@@ -149,7 +176,7 @@ calendarioRoteiro:-
 calendarioSimples:-
     dia(1, []), !.
 
-%Requisito 2 para arquivo (precisa testar no Linux)
+%Requisito 2 para arquivo
 calendarioRoteiroNoArquivo:- tell('requisito2.txt'), calendarioRoteiro, told.
-%Requisito 3 para arquivo (precisa testar no Linux)
-calendarioSimplesNoArquivo:- tell('requisito2.txt'), calendarioSimples, told.
+%Requisito 3 para arquivo
+calendarioSimplesNoArquivo:- tell('requisito3.txt'), calendarioSimples, told.

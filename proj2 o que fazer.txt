@@ -1,9 +1,9 @@
 10- Reordenar os eventos para que o roteiro ocupe menos dias; Dica: não é obrigatório provar que a função é otimizada. ** (Pendente)
 
 Para entregar: 3 artefatos: 
-1) código fonte em Prolog; **Todos
-2) arquivo de inserção de eventos de exemplo em Prolog. ** Bastelli
-3) manual de como escrever ** Bastelli (arquivo de inserção de eventos), Mondini (como mostrar eventos) - OK, Vinicius (como mostrar eventos e calendário.)
+1) código fonte em Prolog; **
+2) arquivo de inserção de eventos de exemplo em Prolog. ** 
+3) manual de como escrever ** (arquivo de inserção de eventos), (como mostrar eventos), (como mostrar eventos e calendário.)
 
 /////////
 1- Roteiro (roteiro com vários eventos e suas datas) ** (Ok)

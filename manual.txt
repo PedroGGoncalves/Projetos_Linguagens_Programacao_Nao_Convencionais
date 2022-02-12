@@ -1,20 +1,38 @@
 %Grupo 2
 %Gustavo Rosseto Leticio, Lucas Spagnol, Lucas Mondini, Pedro Gonçalves, Vinícius Brunheroto
 
-%Abrir arquivo - Feito
-?- consult("projeto2.pl"), consult("arquivo_insercao.pl").
+%Abrir arquivo principal
+?- consult("projeto2.pl").
 
-%Inserção de eventos pelo console- Feito
+%Carregar arquivo de insercao
+?- carregaDoArquivo.
+
+%Definir dias e horarios do roteiro para alocar eventos
+?- roteiroInf.
+
+%Inserção de eventos pelo console
 ?- adiciona(Nome, Duracao). % Nome: nome do evento, Duracao: duração do evento em horas
 
-%Remoção de eventos pelo console - Feito
+%Remoção de eventos pelo console
 ?- remove(Nome). % Nome: nome do evento a ser removido
 
-%Exibir o roteiro em formato de lista - Feito
+%Exibir o roteiro em formato de lista
 ?- imprimeLista.
 
-%Mostrar calendário com roteiro - Feito
+%Mostrar calendário com roteiro
 ?- calendarioRoteiro.
 
-%Mostrar calendário sem roteiro - Feito
+%Mostrar calendário sem roteiro
 ?- calendarioSimples.
+
+%Escrever calendário com roteiro em arquivo (saída: "requisito2.txt")
+?- calendarioRoteiroNoArquivo.
+
+%Escrever calendário sem roteiro em arquivo (saída: "requisito3.txt")
+?- calendarioSimplesNoArquivo.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Como escrever um arquivo de inserção de eventos:
+-O arquivo deve chamar "arquivo_insercao.pl" e estar situado no mesmo diretório de "projeto2.pl".
+-Defina os eventos seguindo a estrutura "evento("NomeDoEvento", Duracao)." NomeDoEvento deve ser string, Duracao deve ser um número inteiro (horas).
+-Importante: para o correto funcionamento do programa, deve-se importar o arquivo de inserção utilizando a função carregaDoArquivo/0. Não utilizar consult/1 diretamente.
