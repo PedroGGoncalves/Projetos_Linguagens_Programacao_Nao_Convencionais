@@ -159,8 +159,8 @@ imprimelistaEventos(_,[]).
 
 %Recursão para procurar se há eventos para imprimir no dia N (passa o dia e o roteiro)
 imprimelistaEventos(N, [Cabeça|Cauda]) :-
-    imprimeData(Cabeça, N), fail; % subrotina 
-    imprimelistaEventos(N, Cauda). % recursão, chama ele mesmo passando a cauda
+    imprimeData(Cabeça, N), fail; % subrotina, o fail foi colocado antes do ; para que a primeira parte sempre dê false e ele consiga chamar a recursão
+    imprimelistaEventos(N, Cauda). % recursão, chama ele mesmo passando a cauda, procurando outros eventos que estejam cadastrados no mesmo dia
 
 %Requisito 1: Exibir o roteiro em formato de lista
 imprimeLista:-
