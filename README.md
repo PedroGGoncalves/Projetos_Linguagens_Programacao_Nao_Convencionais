@@ -20,7 +20,10 @@ Projetos feitos nas linguagens LISP e Prolog, para avaliar os conhecimentos na d
 ## ⚙️ Arquivos
 
 ### Projeto 1
-
+* Manual de formatação para incluir eventos.txt - Manual explicando como incluir eventos
+* Trab 1 oq fazer.txt - Organização e distribuição de tarefas
+* agenda.lisp - Projeto 1 / Código LISP  
+* insere_eventos.lisp - Arquivo de inserções de eventos
 
 ### Projeto 2
 * Trabalho2.pdf - Corresponde a um manual de como utilizar o código Prolog
