@@ -1,0 +1,13 @@
+Grupo:
+Gustavo Letício
+Lucas Bastelli
+Pedro Gonçalves
+
+1º No arquivo insere_eventos, na função (load "/home/user/agenda.lisp") deve ser colocado o local onde se encontra o código agenda.lisp (load "local onde se encontra o código agenda").
+2º No fim do arquivo colocar os casos de teste (exemplo: (evento 'nome 22  1  1  1 ) )
+3º No terminal colocar (load "insere_eventos.lisp")
+4º No terminal colocar (insere_eventos)
+
+Existe 3 funçoes: Evento, para criar um evento na agenda, Consulta para consultar se há um evento na data fornecida e Calendário, que imprime o dia, ou mês, ou ano.
+Colocamos um arquivo com exemplos de uso de cada função, com comentários explicando.
+
