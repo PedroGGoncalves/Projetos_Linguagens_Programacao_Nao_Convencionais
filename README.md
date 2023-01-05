@@ -5,17 +5,17 @@ Projetos feitos nas linguagens LISP e Prolog, para avaliar os conhecimentos na d
 
 ### Projeto 1
 
-* Gustavo Letício (https://github.com/Gus-prog)
-* Lucas Bastelli (https://github.com/LucasBastelli)
+* Gustavo Letício 
+* Lucas Bastelli 
 * Pedro Gonçalves
 
 ### Projeto 2
 
-* Gustavo Letício (https://github.com/Gus-prog)
-* Lucas Bastelli (https://github.com/LucasBastelli)
-* Lucas Mondini (https://github.com/Miodini)
+* Gustavo Letício 
+* Lucas Bastelli 
+* Lucas Mondini 
 * Pedro Gonçalves
-* Vinícius Brunheroto (https://github.com/ViniciusBrunheroto)
+* Vinícius Brunheroto 
 
 ## ⚙️ Arquivos
 
